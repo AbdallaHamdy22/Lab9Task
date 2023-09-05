@@ -15,10 +15,8 @@ function Movies() {
   const isFavorite = (id) => favorites.some((item) => item.id === id);
   const handleToggleFavorites = (id, title, imgSrc) => {
     if (isFavorite(id)) {
-      // Dispatch the action to remove the movie by id
       dispatch(removeFromFavorites(id));
     } else {
-      // If it's not a favorite, add it to favorites
       dispatch(addToFavorites({ id, title, imgSrc }));
     }
   };
